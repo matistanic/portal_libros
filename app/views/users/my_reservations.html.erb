@@ -1,0 +1,12 @@
+<h1>Mis Reservas</h1>
+<table class="table">
+    <tr>
+        <th>Libros</th>
+    </tr>
+    <% @reservations.each do |reservation|%>
+    <tr>
+        <td><%= reservation.book.name %></td>
+        <td><%= link_to 'Eliminar', reservation, method: :delete %></td>
+    </tr>
+    <% end %>
+</table>
